@@ -1,0 +1,57 @@
+﻿@model Rozgar.Entities.Job
+@{
+    ViewBag.Title = "Post A Job";
+}
+
+<!-- POST A JOB START -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="rounded shadow bg-white p-4">
+                    <div class="custom-form">
+                        <div id="message3"></div>
+                        @using (Html.BeginForm("Post", "Jobs", FormMethod.Post))
+                        {
+                            <h4 class="text-dark mb-3">Post a New Job :</h4>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group app-label mt-2">
+                                        @Html.LabelFor(model => model.Title)
+                                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control resume", @placeholder = "Job Title" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group app-label mt-2">
+                                        @Html.LabelFor(model => model.Budget)
+                                        @Html.EditorFor(model => model.Budget, new { htmlAttributes = new { @class = "form-control resume", @placeholder = "Budget" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group app-label mt-2">
+                                        @Html.LabelFor(model => model.Budget)
+                                        @Html.DropDownList("SubCategoryId", null, "Select Category", htmlAttributes: new { @class = "form-control resume" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group app-label mt-2">
+                                        @Html.LabelFor(model => model.Description)
+                                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control resume", @placeholder = "Please Write A Breif Description About Your Job" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- POST A JOB END -->
