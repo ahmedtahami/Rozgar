@@ -49,9 +49,35 @@ namespace Rozgar.Controllers
             var modelList = new List<Job>();
             using (var db = new SqlConnection(connectionString))
             {
-                modelList = db.Query<Job>("Select * from Jobs Where ClientId = " + currentUser).ToList();
+                modelList = db.Query<Job>("Select * From Jobs Where ClientId ='" + currentUser + "'", new { currentUser }).ToList();
             }
             return View(modelList);
+        }
+        public ActionResult Details(int? id)
+        {
+            if (id.Equals(null))
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }
+            var job = new Job();
+            var skills = new List<Skill>();
+            using (var db = new SqlConnection(connectionString))
+            {
+                job = db.Query<Job>("Select * From Jobs Where Id =" + id, new { id }).FirstOrDefault();
+                skills = db.Query<Skill>("Select * From Skills s where exists " +
+                    "(Select SkillId from JobSkills jb where s.Id = jb.SkillId AND jb.JobId =" + id + ")", new { id }).ToList();
+            }
+            if (job.Equals(null))
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.NotFound);
+            }
+            var model = new JobDetailViewModel();
+            model.Job = job;
+            foreach (var item in skills)
+            {
+                model.Skills.Add(item.Name);
+            }
+            return View(model);
         }
     }
 }

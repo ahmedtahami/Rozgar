@@ -184,6 +184,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JobViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Enums\ExperienceLevelEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -337,6 +338,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Jobs\Post.cshtml" />
     <Content Include="Views\Jobs\MyJobs.cshtml" />
+    <Content Include="Views\Jobs\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
