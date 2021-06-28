@@ -170,6 +170,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Freelancer\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Freelancer\FreelancerAreaRegistration.cs" />
     <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Entities\Bid.cs" />
     <Compile Include="Entities\Category.cs" />
@@ -291,6 +293,11 @@
     <Content Include="Content\scss\_pages.scss" />
     <Content Include="Content\scss\_subscribe.scss" />
     <Content Include="Content\scss\_variables.scss" />
+    <Content Include="Areas\Freelancer\Views\web.config" />
+    <Content Include="Areas\Freelancer\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Freelancer\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Freelancer\Views\Home\Feed.cshtml" />
+    <Content Include="Areas\Freelancer\Views\Home\Details.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
