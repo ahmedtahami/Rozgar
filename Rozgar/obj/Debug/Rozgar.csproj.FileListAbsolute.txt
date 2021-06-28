@@ -106,3 +106,5 @@ C:\Users\Ahmed\source\repos\Rozgar\Rozgar\obj\Debug\Rozgar.csproj.CoreCompileInp
 C:\Users\Ahmed\source\repos\Rozgar\Rozgar\obj\Debug\Rozgar.csproj.CopyComplete
 C:\Users\Ahmed\source\repos\Rozgar\Rozgar\obj\Debug\Rozgar.dll
 C:\Users\Ahmed\source\repos\Rozgar\Rozgar\obj\Debug\Rozgar.pdb
+C:\Users\Ahmed\source\repos\Rozgar\Rozgar\bin\Dapper.dll
+C:\Users\Ahmed\source\repos\Rozgar\Rozgar\bin\Dapper.xml

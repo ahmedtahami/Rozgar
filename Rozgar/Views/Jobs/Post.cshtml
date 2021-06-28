@@ -13,7 +13,7 @@
                         <div id="message3"></div>
                         @using (Html.BeginForm("Post", "Jobs", FormMethod.Post))
                         {
-                            <h4 class="text-dark mb-3">Post a New Job :</h4>
+                            <h4 class="text-dark mb-3">Post a New Job</h4>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group app-label mt-2">
@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group app-label mt-2">
-                                        @Html.LabelFor(model => model.Budget)
+                                        @Html.LabelFor(model => model.SubCategory)
                                         @Html.DropDownList("SubCategoryId", null, "Select Category", htmlAttributes: new { @class = "form-control resume" })
                                     </div>
                                 </div>
@@ -46,7 +46,14 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group app-label mt-2">
+                                        @Html.LabelFor(model => model.ExperienceLevel)
+                                        @Html.EnumDropDownListFor(model => model.ExperienceLevel, "Select Experience Level", new { @class = "form-control resume" })
+                                    </div>
+                                </div>
+                            </div>
                         }
                     </div>
                 </div>
